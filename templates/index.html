@@ -4,7 +4,7 @@
 
 <head>
 	{%load staticfiles%}
-	<title>Davken Investments</title>
+	<title>Ellins Investments</title>
 	<!-- Meta-tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>
 						<div class="logo">
-							<h1><a class="navbar-brand" href="index.html"><span>D</span>avken</a></h1>
+							<h1><a class="navbar-brand" href="{% url 'index' %}"><span>E</span>llins</a></h1>
 						</div>
 					</div>
 
@@ -75,8 +75,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-1" id="cl-effect-1">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.html" data-hover="Home">Home</a></li>
-								<li><a href="about.html" data-hover="About">About</a></li>
+								<li class="active"><a href="{% url 'index' %}" data-hover="Home">Home</a></li>
+								<li><a href="{$ 'about' %}" data-hover="About">About</a></li>
 								<li class="dropdown menu__item">
 									<a href="#" class="dropdown-toggle menu__link active" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true"
 									    aria-expanded="false">Pages<span class="caret"></span></a>
@@ -100,19 +100,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li>
 
 						<div class="slider-info">
-							<h3>Welcome to Davken</h3>
+							<h3>Welcome to Ellins</h3>
 							<p>Priceless housing for the lowest price</p>
 						</div>
 					</li>
 					<li>
 						<div class="slider-info">
-							<h3>Welcome to Davken</h3>
-							<p>Attractive home purchase offers</p>
+							<h3>Welcome to Ellins</h3>
+							<p>Attractive home leasing offers</p>
 						</div>
 					</li>
 					<li>
 						<div class="slider-info">
-							<h3>Welcome to Davken</h3>
+							<h3>Welcome to Ellins</h3>
 							<p>Your success in property operations</p>
 						</div>
 					</li>
@@ -131,12 +131,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4><span>T</span>ract</h4>
-					<img src="images/modal.jpg" alt=" " class="img-responsive">
-					<h5>Professional realtor works for you</h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-						dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-						book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+					<h4><span>E</span>llins</h4>
+					<img src="{% static 'images/modal.jpg'%}" alt=" " class="img-responsive">
+					<h5>Ellins Orange House</h5>
+					<p>These are a state of the art, deluxe Students hostels located in Kisii. They offer a variety of products including spacious self contained rooms, clean water and constant electricity all year round. Also they are very secure and located strategically near Kisii town and other social facilities in the region.</p>
 				</div>
 			</div>
 		</div>
@@ -144,18 +142,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //Modal1 -->
 	<!--//Slider-->
 	<!--//Header-->
-
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+		<!-- Modal2 -->
+		
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4><span>E</span>llins</h4>
+					<img src="{% static 'images/g3s.jpg'%}" alt=" " class="img-responsive">
+					<h5>Ellins coming soon</h5>
+					<p>Still under construction. Periodic updates shall be given with time</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal2 -->
 	<!-- about -->
 	<div class="about">
 		<div class="container">
 			<h3 class="tittle">About Us</h3>
-			<p class="heading-btm-w3ls">Davken investments ltd.</p>
+			<p class="heading-btm-w3ls">Ellins investments ltd.</p>
 			<div class="about-main">
 				<div class="about-left-w3-agile">
 					<span class="fa fa-home" aria-hidden="true"></span>
-					<h4 class="sub-hdng">Davken hostels.</h4>
+					<h4 class="sub-hdng">Ellins hostels.</h4>
 					<div class="clearfix"></div>
-					<p class="para-w3-agileits">Davken hostels are modern , state of the art student hostels located in location. </p>
+					<p class="para-w3-agileits">Ellins hostels are modern , state of the art student hostels located in location. </p>
 					<p class="para-w3-agileits">They are also fairly priced to meet the needs of any standard student who may want self contained,spacious rooms.</p>
 				</div>
 				<div class="about-right-agileinfo">
@@ -164,7 +178,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="fa fa-compass" aria-hidden="true"></span>
 							<h6>Our Company</h6>
 							<div class="clearfix"></div>
-							<p class="para-w3-agileits">Davken is a real estate company, bringing revolution in the housing industry in East Africa.</p>
+							<p class="para-w3-agileits">Ellins is a real estate company, bringing revolution in the housing industry in East Africa.</p>
 						</div>
 						<div class="about-inner a2">
 							<span class="fa fa-building" aria-hidden="true"></span>
@@ -178,7 +192,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="fa fa-home" aria-hidden="true"></span>
 							<h6>Our Company</h6>
 							<div class="clearfix"></div>
-							<p class="para-w3-agileits">Davken is a real estate company, bringing revolution in the housing industry in East Africa.</p>
+							<p class="para-w3-agileits">Ellins is a real estate company, bringing revolution in the housing industry in East Africa.</p>
 						</div>
 						<div class="about-inner a4">
 							<span class="fa fa-building-o" aria-hidden="true"></span>
@@ -200,7 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-5 blog-left-w3-agile">
 			<div class="blog-inner">
-				<span>Mauris</span>
+				<span>Ellins Mikindani House</span>
 				<h4 class="sub-hdng"><a href="#" data-toggle="modal" data-target="#myModal1">Recent Commercial Real Estate Transactions</a></h4>
 				<p class="para-w3-agileits">Mauris faucibus at nunc in tincidunt. Ut rhoncus, nunc eget rutrum commodo, risus augue elementum elit, ac ultricies
 					orci eros ac dolor. Aliquam vehicula, lacus pulvinar cursus dictum, felis eros placerat nisi.</p>
@@ -213,18 +227,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-5 blog-right-w3-agile">
 			<div class="blog-inner dark">
-				<span>Vestibulum</span>
-				<h4 class="sub-hdng"><a href="#" data-toggle="modal" data-target="#myModal1">6 Free Sources for Home Design Inspiration</a></h4>
+				<span>Coming up</span>
+				<h4 class="sub-hdng"><a href="#" data-toggle="modal" data-target="#myModal2">6 Free Sources for Home Design Inspiration</a></h4>
 				<p class="para-w3-agileits">Mauris faucibus at nunc in tincidunt. Ut rhoncus, nunc eget rutrum commodo, risus augue elementum elit, ac ultricies
 					orci eros ac dolor. Aliquam vehicula, lacus pulvinar cursus dictum, felis eros placerat nisi.</p>
-				<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
+				<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal2">Read More</a></div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="blog-inner green">
-				<span>Etiam</span>
+				<span>Ellins Orange House</span>
 				<h4 class="sub-hdng"><a href="#" data-toggle="modal" data-target="#myModal1">The Most Inspiring Interior Design Of 2018</a></h4>
-				<p class="para-w3-agileits">Mauris faucibus at nunc in tincidunt. Ut rhoncus, nunc eget rutrum commodo, risus augue elementum elit, ac ultricies
-					orci eros ac dolor. Aliquam vehicula, lacus pulvinar cursus dictum, felis eros placerat nisi.</p>
+				<p class="para-w3-agileits">Deluxe ,state of the art student residence .</p>
 				<div class="readmore-w3"><a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a></div>
 				<div class="clearfix"> </div>
 			</div>
@@ -248,7 +261,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="contact-eql">
 				<div class="contact-left">
 					<h4>About Us</h4>
-					<p class="para-w3-agileits">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tortor est, malesuada at nulla in.</p>
+					<p class="para-w3-agileits">A passionate real estate housing providers.</p>
 					<h4>Find Us</h4>
 					<div class="add-info">
 						<span class="fa fa-map-marker" aria-hidden="true"></span>
@@ -315,7 +328,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<div class="bottom-social-w3ls">
-		<h2 class="footer-logo"><a href="index.html"><span>D</span>avken</a></h2>
+		<h2 class="footer-logo"><a href="index.html"><span>E</span>llins</a></h2>
 		<nav>
 			<ul class="nav-w3ls">
 				<li><a href="index.html">Home</a></li>
