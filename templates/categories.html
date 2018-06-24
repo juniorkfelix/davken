@@ -8,7 +8,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Davken Investments</title>
+	{% load staticfiles %}
+	<title>Ellins Investments</title>
 	<!-- Meta-tags -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,14 +25,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 	<!-- //Meta-tags -->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- //Bootstrap Css -->
-	<link href="css/font-awesome.css" rel="stylesheet"><!-- //Font-awesome Css -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" /><!-- //Required Css -->
-	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen"><!-- //Gallery Css -->
+	<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" /><!-- //Bootstrap Css -->
+	<link href="{% static 'css/font-awesome.css'%}" rel="stylesheet"><!-- //Font-awesome Css -->
+	<link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" /><!-- //Required Css -->
+	<link rel="stylesheet" href="{% static 'css/chocolat.css'%}" type="text/css" media="screen"><!-- //Gallery Css -->
 	<!--fonts-->
-	<link href="//fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="{% static '//fonts.googleapis.com/css?family=Megrim'%}" rel="stylesheet">
+	<link href="{% static '//fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700'%}" rel="stylesheet">
+	<link href="{% static '//fonts.googleapis.com/css?family=Lato:300,400,700,900'%}" rel="stylesheet">
 	<!--//fonts-->
 
 </head>
@@ -72,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>
 						<div class="logo">
-							<h1><a class="navbar-brand" href="index.html"><span>D</span>avken</a></h1>
+							<h1><a class="navbar-brand" href="{% url 'index' %}"><span>E</span>llins</a></h1>
 						</div>
 					</div>
 
@@ -80,8 +81,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-1" id="cl-effect-1">
 							<ul class="nav navbar-nav">
-								<li><a href="index.html" data-hover="Home">Home</a></li>
-								<li><a href="about.html" data-hover="About">About</a></li>
+								<li><a href="{% url 'index' %}" data-hover="Home">Home</a></li>
+								<li><a href="{% url 'about' %}" data-hover="About">About</a></li>
 								<li class="dropdown menu__item">
 									<a href="#" class="dropdown-toggle menu__link active" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true"
 									    aria-expanded="false">Pages<span class="caret"></span></a>
@@ -90,8 +91,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="icons.html">Web Icons</a></li>
 									</ul>
 								</li>
-								<li class="active"><a href="categories.html" data-hover="Categories">Categories</a></li>
-								<li><a href="contact.html" data-hover="Contact">Contact</a></li>
+								<li class="active"><a href="{% url 'categories' %}" data-hover="Categories">Categories</a></li>
+								<li><a href="{% url 'contact' %}" data-hover="Contact">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -110,8 +111,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="agile_gallery_grids w3-agile demo">
 				<div class="col-md-4 col-sm-4 col-xs-4 gal-sec">
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g1.jpg">
-						<img src="images/g1.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g1.jpg'%}">
+						<img src="{% static 'images/g1.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Swimming Pool</h4>
 							<p>52 Properties</p>
@@ -119,8 +120,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g2.jpg">
-						<img src="images/g2.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g2.jpg'%}">
+						<img src="{% static 'images/g2.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Summer House</h4>
 							<p>48 Properties</p>
@@ -128,8 +129,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g4.jpg">
-						<img src="images/g4.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g4.jpg'%}">
+						<img src="{% static 'images/g4.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Bedroom Apartments</h4>
 							<p>85 Properties</p>
@@ -139,8 +140,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 gal-sec">
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g3s.jpg">
-						<img src="images/g3.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g3s.jpg'%}">
+						<img src="{% static 'images/g3.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Studio Appartments</h4>
 							<p>30 Properties</p>
@@ -148,8 +149,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g1.jpg">
-						<img src="images/g1.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g1.jpg'%}">
+						<img src="{% static 'images/g1.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Swimming Pool</h4>
 							<p>52 Properties</p>
@@ -159,8 +160,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="col-md-4 col-sm-4 col-xs-4 gal-sec">
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g4.jpg">
-						<img src="images/g4.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g4.jpg'%}">
+						<img src="{% static 'images/g4.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Bedroom Apartments</h4>
 							<p>85 Properties</p>
@@ -168,8 +169,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g5.jpg">
-						<img src="images/g5.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g5.jpg'%}">
+						<img src="{% static 'images/g5.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Cozy Houses</h4>
 							<p>68 Properties</p>
@@ -177,8 +178,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</div>
 					<div class="gallery-grid1">
-						<a title="Attractive home purchase offers." href="images/g2.jpg">
-						<img src="images/g2.jpg" alt=" " class="img-responsive" />
+						<a title="Attractive home purchase offers." href="{% static 'images/g2.jpg'%}">
+						<img src="{% static 'images/g2.jpg'%}" alt=" " class="img-responsive" />
 						<div class="p-mask">
 							<h4>Summer House</h4>
 							<p>48 Properties</p>
@@ -213,13 +214,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<div class="bottom-social-w3ls">
-		<h2 class="footer-logo"><a href="index.html"><span>D</span>avken</a></h2>
+		<h2 class="footer-logo"><a href="index.html"><span>E</span>llins</a></h2>
 		<nav>
 			<ul class="nav-w3ls">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="categories.html">Categories</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'categories' %}">Categories</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="w3ls-social-icons">
@@ -235,9 +236,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--/footer -->
 
 	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/jquery-2.2.3.min.js'%}"></script>
 	<!--gallery -->
-	<script src="js/jquery.chocolat.js"></script>
+	<script src="{% static 'js/jquery.chocolat.js'%}"></script>
 	<!--light-box-files -->
 	<script type="text/javascript">
 		$(function () {
@@ -246,8 +247,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<!-- //gallery -->
 	<!-- start-smoth-scrolling -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js'%}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js'%}"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -279,7 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- //smooth scrolling -->
-	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js'%}"></script>
 
 </body>
 

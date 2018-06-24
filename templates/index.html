@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<nav class="cl-effect-1" id="cl-effect-1">
 							<ul class="nav navbar-nav">
 								<li class="active"><a href="{% url 'index' %}" data-hover="Home">Home</a></li>
-								<li><a href="{$ 'about' %}" data-hover="About">About</a></li>
+								<li><a href="{% url 'about' %}" data-hover="About">About</a></li>
 								<li class="dropdown menu__item">
 									<a href="#" class="dropdown-toggle menu__link active" data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true"
 									    aria-expanded="false">Pages<span class="caret"></span></a>
@@ -85,8 +85,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li><a href="icons.html">Web Icons</a></li>
 									</ul>
 								</li>
-								<li><a href="categories.html" data-hover="Categories">Categories</a></li>
-								<li><a href="contact.html" data-hover="Contact">Contact</a></li>
+								<li><a href="{% url 'categories' %}" data-hover="Categories">Categories</a></li>
+								<li><a href="{% url 'contact' %}" data-hover="Contact">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -331,10 +331,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<h2 class="footer-logo"><a href="index.html"><span>E</span>llins</a></h2>
 		<nav>
 			<ul class="nav-w3ls">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="categories.html">Categories</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="{% url 'index' %}">Home</a></li>
+				<li><a href="{% url 'about' %}">About</a></li>
+				<li><a href="{% url 'categories' %}">Categories</a></li>
+				<li><a href="{% url 'contact' %}">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="w3ls-social-icons">
